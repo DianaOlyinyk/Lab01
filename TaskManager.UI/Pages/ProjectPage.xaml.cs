@@ -1,31 +1,30 @@
-using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using TaskManager.DL.Models;        
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace TaskManager.UI.Pages
+public sealed partial class ProjectsPage : Page
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class ProjectPage : Page
+    private List<Project> projects;
+
+    public ProjectsPage()
     {
-        public ProjectPage()
-        {
-            InitializeComponent();
-        }
+        this.InitializeComponent();
+        
+        projects = PseudoRepository.GetProjects();
+        ProjectsList.ItemsSource = projects;
+    }
+
+    private void InitializeComponent()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void ProjectsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var project = (Project)ProjectsList.SelectedItem;
+
+        Frame.Navigate(typeof(ProjectDetailsPage), project);
     }
 }

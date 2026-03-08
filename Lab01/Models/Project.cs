@@ -1,8 +1,7 @@
-﻿
-using Lab01;
-using Task = Lab01.Task;
-using TaskStatus = Lab01.TaskStatus;
-
+﻿//using TaskManager.DL.Models;
+using Task = TaskManager.DL.Models.Task;
+using TaskStatus = TaskManager.DL.Models.TaskStatus;
+namespace TaskManager.DL.Models;
 public class Project
 {
     private static int _idCounter = 1;

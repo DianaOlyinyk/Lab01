@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TaskStatus = Lab01.TaskStatus;
+using TaskStatus = TaskManager.DL.Models.TaskStatus;
 
-namespace Lab01
+namespace TaskManager.DL.Models
 {
     public class Task
     {

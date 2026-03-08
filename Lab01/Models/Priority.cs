@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab01
+namespace TaskManager.DL.Models
 {
-    public enum TaskStatus
+    public enum Priority
     {
-        Open,
-        InProgress,
-        Completed
+        Critical,
+        High,
+        Medium,
+        Low
     }
 }

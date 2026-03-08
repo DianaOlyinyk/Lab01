@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab01
+namespace TaskManager.DL.Models
 {
-    public enum ProjectType
+    internal class RepositoryService
     {
-        Educational,
-        Work,
-        Personal
+       
+
     }
 }

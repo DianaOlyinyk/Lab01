@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab01
+namespace TaskManager.DL.Models
 {
-    public enum Priority
+    public enum ProjectType
     {
-        Critical,
-        High,
-        Medium,
-        Low
+        Educational,
+        Work,
+        Personal
     }
 }

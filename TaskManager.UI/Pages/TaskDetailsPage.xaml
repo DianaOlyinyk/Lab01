@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Page
     x:Class="TaskManager.UI.Pages.TaskDetailsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TaskManager.UI.Pages"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:local="using:TaskManager.UI.Pages">
 
-    <Grid>
+    <StackPanel Padding="20">
 
-    </Grid>
+        <TextBlock x:Name="TaskTitle" FontSize="28"/>
+        <TextBlock x:Name="TaskDescription"/>
+        <TextBlock x:Name="TaskPriority"/>
+        <TextBlock x:Name="TaskDueDate"/>
+        <TextBlock x:Name="TaskOverdue"/>
+        <Button Content="Back" Click="Back_Click"/>
+
+    </StackPanel>
+
 </Page>
+

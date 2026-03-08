@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskManager.DL
+namespace TaskManager.DL.Models
 {
-    internal class PseudoRepository
+    public enum TaskStatus
     {
+        Open,
+        InProgress,
+        Completed
     }
 }
